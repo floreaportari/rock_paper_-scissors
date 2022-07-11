@@ -43,3 +43,17 @@ const playRound = function (playerSelection, computerSelection) {
     }
   }
 };
+
+const game = function () {
+  for (let i = 0; i < 5; i++) {
+    round++;
+    console.log(`Round: ${round}`);
+    let playerSelection = prompt("Please type in rock, paper or scissors");
+    const computerSelection = computerPlay();
+    console.log(playRound(playerSelection, computerSelection));
+    console.log("Player score: " + playerScore);
+    console.log("Computer score: " + computerScore);
+  }
+};
+
+game();
